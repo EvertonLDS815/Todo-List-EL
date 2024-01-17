@@ -52,7 +52,10 @@ function deleteItem(index) {
 
 function loadTasks() {
     const tasks = localStorage.getItem('todoList');
-    list = JSON.parse(tasks);
+
+    if (tasks) {
+        list = JSON.parse(tasks);
+    }
 
     showTask();
 }
