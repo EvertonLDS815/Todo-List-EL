@@ -60,6 +60,13 @@ function loadTasks() {
     showTask();
 }
 
+function addByEnter({key}) {
+    if (key === "Enter") {
+        addTask()
+    }
+}
+
 loadTasks();
 
 button.addEventListener('click', addTask);
+input.addEventListener("keypress", addByEnter)
